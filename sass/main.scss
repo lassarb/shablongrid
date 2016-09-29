@@ -1,0 +1,225 @@
+/*colors*/
+
+$black: #000;
+$color_container: #fff6e4;
+$color_cols: white;
+// $color_cols: #fff6e4;
+// $color_cols: #fff6e4;
+$color_outline: transparent;
+
+/*fonts*/
+
+$font_0: Arial;
+$font_1: Helvetica;
+$font_2: sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    *behavior: url(/scripts/boxsizing.htc);
+    /*.htaccess file:
+    AddType text/x-component .htc*/
+}
+html, body{
+    height:100%;
+        /* For full height images */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    margin-top: -20px;
+}
+
+.fluid-bg {
+    width: 100%;
+    // color: #fd4;
+    // background: url('../img/banner1.jpg') no-repeat top center !important;
+    // background-size: cover;
+    // height: 650px;
+    // background-attachment: fixed !important;
+    // outline: 5px solid $color_outline;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)),
+      url("../img/banner5.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    // background-position: 80% center;
+    background-attachment: fixed;
+    // -webkit-background-size: cover;
+    background-size: cover;
+    color: #f5f5f5;
+    // padding: 10em 0;
+    padding-bottom: 35em;
+    margin-bottom: 40px;
+    height: 100%;
+
+}
+
+body {
+    font: 100%/1.5em $font_0, $font_1, $font_2;
+    color: $black;
+    margin-top: 0;
+}
+
+.row {
+    outline: 5px solid $color_outline;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+    // background: $color_container;
+    .cols {
+        float: left;
+        margin: 0 0 1em;
+        padding: 0 1em;
+        background: $color_cols;
+        text-align: center;
+        &.col-12 {
+            width: 100%;
+            outline: 5px solid $color_outline;
+        }
+        &.col-11 {
+            width: 91.66666667%;
+        }
+        &.col-10 {
+            width: 83.33333333%;
+        }
+        &.col-9 {
+            width: 75%;
+        }
+        &.col-8 {
+            width: 66.66666667%;
+        }
+        &.col-7 {
+            width: 58.33333333%;
+        }
+        &.col-6 {
+            width: 50%;
+        }
+        &.col-5 {
+            width: 41.66666667%;
+        }
+        &.col-4 {
+            width: 33.33333333%;
+        }
+        &.col-3 {
+            width: 25%;
+        }
+        &.col-2 {
+            width: 16.66666667%;
+        }
+        &.col-1 {
+            width: 8.33333333%;
+        }
+    }
+}
+
+.container:before,
+.container:after,
+.row:after,
+.row:before,
+.clear:before,
+.clear:after {
+    content: " ";
+    display: table;
+}
+
+.container:before,
+.container:after,
+.row:after,
+.row:before,
+.clear:before,
+.clear:after {
+    clear: both;
+}
+
+
+.navbar {
+    border-color: #e7e7e7;
+    min-height: 50px;
+    outline: 3px solid $color_outline;
+    // opacity: 1;
+    // transition: opacity .5s;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1030;
+    // max-width: 980px;
+    margin: auto;
+    padding: 6px 5px;
+    border: 2px solid;
+    border-width: 0 1px 4px 1px;
+    border-color: #e7e7e7;
+    background-color: rgba(255, 255, 255, 1);
+    transition: background-color 2s ease 0s;
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+        color: #2B4862;
+        text-decoration: none;
+    }
+}
+
+.navbar>ul>li{
+    display: inline-block;
+}
+nav {
+
+}
+.navbar.navbar-transparent {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+.navbar.navbar-transparent {
+    // background-color: rgba(255, 255, 255, 0);
+    background-color: transparent;
+    transition: background-color 2s ease 0s;
+}
+.navbar-transparent {
+    opacity: 1;
+    transition: opacity .5s;
+}
+.navbar-brand {
+    float: left;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    height: 50px;
+}
+.content {
+  margin-top: 50px;
+}
+
+@media print {}
+
+@media screen and (max-width: 320px) {
+    h1 {
+        color: blue;
+    }
+    .container .cols {
+        &.col-12,
+        &.col-10,
+        &.col-9,
+        &.col-8,
+        &.col-7,
+        &.col-6,
+        &.col-4,
+        &.col-3,
+        &.col-1 {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) {}
+
+@media screen and (max-width: 320px) {}
