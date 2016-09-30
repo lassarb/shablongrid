@@ -120,7 +120,6 @@ body {
   border-color: #e7e7e7;
   min-height: 50px;
   outline: 3px solid transparent;
-  position: fixed;
   right: 0;
   left: 0;
   top: 0;
@@ -151,6 +150,16 @@ body {
   padding: 10px;
   color: #2B4862;
   text-decoration: none;
+}
+.navbar .menu_button {
+  color: #93a4a7;
+}
+
+.button_hidden i {
+  font-size: 1.5em;
+  border: none !important;
+  background-color: transparent !important;
+  color: #93a4a7;
 }
 
 .navbar > ul > li {
@@ -186,12 +195,29 @@ body {
   margin-top: 50px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 768px) {
   h1 {
     color: blue;
   }
 
   .container .cols.col-12, .container .cols.col-10, .container .cols.col-9, .container .cols.col-8, .container .cols.col-7, .container .cols.col-6, .container .cols.col-4, .container .cols.col-3, .container .cols.col-1 {
     width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .button_hidden {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navbar ul {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    display: block;
+    text-align: left;
   }
 }

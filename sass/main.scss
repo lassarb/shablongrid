@@ -145,7 +145,7 @@ body {
     outline: 3px solid $color_outline;
     // opacity: 1;
     // transition: opacity .5s;
-    position: fixed;
+    // position: fixed;
     right: 0;
     left: 0;
     top: 0;
@@ -167,7 +167,17 @@ body {
         color: #2B4862;
         text-decoration: none;
     }
+    .menu_button {
+        color: #93a4a7;
+    }
 }
+.button_hidden i {
+    font-size: 1.5em;
+   border: none !important;
+    background-color: transparent !important;
+    color: #93a4a7;
+}
+
 
 .navbar>ul>li{
     display: inline-block;
@@ -201,7 +211,7 @@ nav {
 
 @media print {}
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 768px) {
     h1 {
         color: blue;
     }
@@ -222,4 +232,26 @@ nav {
 
 @media screen and (min-width: 320px) {}
 
-@media screen and (max-width: 320px) {}
+@media screen and (min-width: 768px) {
+    .button_hidden{
+        display: none;
+
+    }
+}
+@media only screen and (max-width: 768px) {
+  .navbar ul {
+    // background-color: #3797bf;
+    // display: none;
+    position: absolute;
+    top: 50px;
+    // left: 0;
+    width: 100%;
+
+   // text-align: left !important;
+  }
+  .navbar ul li {
+    display: block;
+    text-align: left;
+  }
+
+}
