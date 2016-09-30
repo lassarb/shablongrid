@@ -1,6 +1,6 @@
 
 $(window).scroll(function() {
-    if($(this).scrollTop() > 200) {
+    if($(this).scrollTop() > 100) {
         $('.navbar').removeClass('navbar-transparent');
     } else {
         $('.navbar').addClass('navbar-transparent');

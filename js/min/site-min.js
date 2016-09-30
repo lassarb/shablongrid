@@ -1,1 +1,1 @@
-$(window).scroll(function(){$(this).scrollTop()>200?$(".navbar").removeClass("navbar-transparent"):$(".navbar").addClass("navbar-transparent")});
+$(window).scroll(function(){$(this).scrollTop()>100?$(".navbar").removeClass("navbar-transparent"):$(".navbar").addClass("navbar-transparent")});

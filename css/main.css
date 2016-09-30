@@ -118,9 +118,12 @@ body {
 }
 
 .navbar {
-  border-color: #e7e7e7;
   min-height: 50px;
   outline: 3px solid transparent;
+  opacity: 1;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+  position: fixed;
   right: 0;
   left: 0;
   top: 0;
@@ -169,19 +172,7 @@ body {
 
 .navbar.navbar-transparent {
   background-color: transparent !important;
-  border-color: transparent !important;
-}
-
-.navbar.navbar-transparent {
-  background-color: transparent;
-  -webkit-transition: background-color 2s ease 0s;
-  transition: background-color 2s ease 0s;
-}
-
-.navbar-transparent {
-  opacity: 1;
-  -webkit-transition: opacity .5s;
-  transition: opacity .5s;
+  border-color: transparent;
 }
 
 .navbar-brand {
@@ -197,10 +188,6 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  h1 {
-    color: blue;
-  }
-
   .container .cols.col-12, .container .cols.col-10, .container .cols.col-9, .container .cols.col-8, .container .cols.col-7, .container .cols.col-6, .container .cols.col-4, .container .cols.col-3, .container .cols.col-1 {
     width: 100%;
   }
@@ -218,12 +205,12 @@ body {
     width: 100%;
   }
 
-  .navbar > ul > li {
+  .navbar ul > li {
     display: block;
   }
 }
 @media only screen and (min-width: 769px) {
-  .navbar > ul > li {
+  .navbar ul > li {
     display: inline-block !important;
   }
 }
