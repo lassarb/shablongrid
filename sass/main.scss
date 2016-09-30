@@ -138,6 +138,10 @@ body {
     clear: both;
 }
 
+.navbar ul li {
+    display: inline-block;
+}
+
 .navbar {
     min-height: 50px;
     outline: 3px solid $color_outline;
@@ -155,6 +159,14 @@ body {
     border-color: #e7e7e7;
     background-color: rgba(255, 255, 255, 1);
     transition: background-color 2s ease 0s;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        float: left;
+        z-index: 12;
+        width: 100%;
+    }
     a {
         display: flex;
         justify-content: center;
@@ -168,34 +180,36 @@ body {
         color: #93a4a7;
     }
 }
-
+.button_hidden {
+    border-style: none !important;
+    background-color: white;
+    padding-top: 4px;
+}
 .button_hidden i {
     font-size: 1.5em;
-    border: none !important;
-    background-color: transparent !important;
     color: #93a4a7;
+    z-index: 5000;
 }
-
-.navbar>ul>li {
-    display: inline-block !important;
-}
-
-nav {}
-
-
-
 .navbar.navbar-transparent {
     // background-color: rgba(255, 255, 255, 0);
     background-color: transparent !important;
     border-color: transparent;
     // transition: background-color 2s ease 0s;
 }
-
-// .navbar-transparent {
-//     opacity: 1;
-//     transition: opacity .5s;
-// }
-
+.main_menu a:hover {
+    background-color: #2787af;
+}
+.main_menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: left;
+    // text-transform: uppercase;
+    z-index: 12;
+}
+.main_menu ul li {
+    display: inline-block;
+}
 .navbar-brand {
     float: left;
     padding: 15px 15px;
@@ -203,17 +217,11 @@ nav {}
     line-height: 20px;
     height: 50px;
 }
-
 .content {
     margin-top: 50px;
 }
-
 @media print {}
-
 @media screen and (max-width: 768px) {
-    h1 {
-        // color: blue;
-    }
     .container .cols {
         &.col-12,
         &.col-10,
@@ -228,7 +236,6 @@ nav {}
         }
     }
 }
-
 @media screen and (min-width: 320px) {}
 
 @media screen and (min-width: 768px) {
@@ -236,24 +243,22 @@ nav {}
         display: none;
     }
 }
-
 @media only screen and (max-width: 768px) {
     .navbar ul {
-        // background-color: #3797bf;
         display: none;
-        position: absolute;
-        top: 50px;
-        // left: 0;
         width: 100%;
-        // text-align: left !important;
     }
-    .navbar ul>li {
+    .navbar ul li {
         display: block;
+        background-color: transparent;
+    }
+    .navbar ul li a i {
+        visibility: hidden;
     }
 }
 
-@media only screen and (min-width: 769px) {
-    .navbar ul>li {
-        display: inline-block !important;
+@media only screen and (min-width: 768px) {
+    .navbar ul {
+        display: block !important;
     }
 }
