@@ -20,9 +20,11 @@ $font_2: sans-serif;
     /*.htaccess file:
     AddType text/x-component .htc*/
 }
-html, body{
-    height:100%;
-        /* For full height images */
+
+html,
+body {
+    height: 100%;
+    /* For full height images */
 }
 
 img {
@@ -42,8 +44,7 @@ header {
     // height: 650px;
     // background-attachment: fixed !important;
     // outline: 5px solid $color_outline;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)),
-      url("../img/banner5.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner5.jpg");
     background-repeat: no-repeat;
     background-position: top center;
     // background-position: 80% center;
@@ -55,7 +56,6 @@ header {
     padding-bottom: 35em;
     margin-bottom: 40px;
     height: 100%;
-
 }
 
 body {
@@ -138,7 +138,6 @@ body {
     clear: both;
 }
 
-
 .navbar {
     border-color: #e7e7e7;
     min-height: 50px;
@@ -171,33 +170,36 @@ body {
         color: #93a4a7;
     }
 }
+
 .button_hidden i {
     font-size: 1.5em;
-   border: none !important;
+    border: none !important;
     background-color: transparent !important;
     color: #93a4a7;
 }
 
-
-.navbar>ul>li{
-    display: inline-block;
+.navbar>ul>li {
+    display: inline-block !important;
 }
-nav {
 
-}
+nav {}
+
 .navbar.navbar-transparent {
     background-color: transparent !important;
     border-color: transparent !important;
 }
+
 .navbar.navbar-transparent {
     // background-color: rgba(255, 255, 255, 0);
     background-color: transparent;
     transition: background-color 2s ease 0s;
 }
+
 .navbar-transparent {
     opacity: 1;
     transition: opacity .5s;
 }
+
 .navbar-brand {
     float: left;
     padding: 15px 15px;
@@ -205,8 +207,9 @@ nav {
     line-height: 20px;
     height: 50px;
 }
+
 .content {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 @media print {}
@@ -233,25 +236,28 @@ nav {
 @media screen and (min-width: 320px) {}
 
 @media screen and (min-width: 768px) {
-    .button_hidden{
+    .button_hidden {
         display: none;
-
     }
 }
+
 @media only screen and (max-width: 768px) {
-  .navbar ul {
-    // background-color: #3797bf;
-    // display: none;
-    position: absolute;
-    top: 50px;
-    // left: 0;
-    width: 100%;
+    .navbar ul {
+        // background-color: #3797bf;
+        display: none;
+        position: absolute;
+        top: 50px;
+        // left: 0;
+        width: 100%;
+        // text-align: left !important;
+    }
+    .navbar>ul>li {
+        display: block;
+    }
+}
 
-   // text-align: left !important;
-  }
-  .navbar ul li {
-    display: block;
-    text-align: left;
-  }
-
+@media only screen and (min-width: 769px) {
+    .navbar>ul>li {
+        display: inline-block !important;
+    }
 }
