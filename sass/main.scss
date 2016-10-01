@@ -168,7 +168,7 @@ body {
         width: 100%;
     }
     a {
-        display: flex;
+        // display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -176,7 +176,7 @@ body {
         color: #2B4862;
         text-decoration: none;
     }
-    .menu_button {
+    .menu_button i {
         color: #93a4a7;
     }
 }
@@ -220,6 +220,7 @@ body {
 .content {
     margin-top: 50px;
 }
+
 @media print {}
 @media screen and (max-width: 768px) {
     .container .cols {
@@ -252,9 +253,9 @@ body {
         display: block;
         background-color: transparent;
     }
-    .navbar ul li a i {
-        visibility: hidden;
-    }
+    // .navbar ul li a i {
+    //     visibility: hidden;
+    // }
 }
 
 @media only screen and (min-width: 768px) {
