@@ -185,7 +185,7 @@ body {
   border-color: transparent;
 }
 
-.main_menu a:hover {
+.navbar a:hover {
   background-color: #2787af;
 }
 
@@ -218,7 +218,7 @@ body {
     width: 100%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .button_hidden {
     display: none;
   }
