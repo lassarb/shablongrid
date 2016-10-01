@@ -1,3 +1,4 @@
+
 /*colors*/
 
 $black: #000;
@@ -39,14 +40,15 @@ header {
 .fluid-bg {
     max-width: 100%;
     // color: #fd4;
-    // background: url('../img/banner1.jpg') no-repeat top center !important;
+    background: url('../img/medium.jpeg') no-repeat center center;
+
     // background-size: cover;
     // height: 650px;
     // background-attachment: fixed !important;
     // outline: 5px solid $color_outline;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner7.jpg");
-    background-repeat: no-repeat;
-    background-position: top center;
+    // background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner7.jpg");
+    // background-repeat: no-repeat;
+    // background-position: top center;
     // background-position: 80% center;
     background-attachment: fixed;
     // -webkit-background-size: cover;
@@ -169,12 +171,14 @@ body {
     }
     a {
         // display: flex;
-        justify-content: center;
-        align-items: center;
+        // justify-content: center;
+        // align-items: center;
         width: 100%;
         padding: 10px;
         color: #2B4862;
+        // color: white;
         text-decoration: none;
+        font-size: 1.2em;
     }
     .menu_button i {
         color: #93a4a7;
@@ -183,12 +187,14 @@ body {
 .button_hidden {
     border-style: none !important;
     background-color: white;
-    padding-top: 4px;
+
+    // padding-top: 4px;
 }
 .button_hidden i {
     font-size: 1.5em;
     color: #93a4a7;
     z-index: 5000;
+    font-weight: bold;
 
 }
 .navbar.navbar-transparent {
@@ -251,19 +257,26 @@ body {
         width: 100%;
 
     }
+
     .navbar ul li {
         display: block;
-        background-color: transparent;
+
     }
-    .navbar ul li a i {
-    //     visibility: hidden;
-    // padding: 0 auto;
-    // text-align: center;
-     }
+    .fluid-bg {
+         background: url('../img/small.jpeg') no-repeat center center;
+         background-size: cover;
+
+    }
+
 }
 
 @media only screen and (min-width: 992px) {
     .navbar ul {
         display: block !important;
     }
+}
+
+.fullscreen a {
+    display: flex;
+
 }
