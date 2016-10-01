@@ -25,9 +25,9 @@ header {
 }
 
 .fluid-bg {
-  width: 100%;
-  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner5.jpg");
-  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner5.jpg");
+  max-width: 100%;
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner7.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner7.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-attachment: fixed;
@@ -223,7 +223,7 @@ body {
     display: none;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
   .navbar ul {
     display: none;
     width: 100%;
@@ -234,7 +234,7 @@ body {
     background-color: transparent;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   .navbar ul {
     display: block !important;
   }

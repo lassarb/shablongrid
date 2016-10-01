@@ -37,14 +37,14 @@ header {
 }
 
 .fluid-bg {
-    width: 100%;
+    max-width: 100%;
     // color: #fd4;
     // background: url('../img/banner1.jpg') no-repeat top center !important;
     // background-size: cover;
     // height: 650px;
     // background-attachment: fixed !important;
     // outline: 5px solid $color_outline;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner5.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner7.jpg");
     background-repeat: no-repeat;
     background-position: top center;
     // background-position: 80% center;
@@ -244,21 +244,24 @@ body {
         display: none;
     }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
     .navbar ul {
         display: none;
         width: 100%;
+
     }
     .navbar ul li {
         display: block;
         background-color: transparent;
     }
-    // .navbar ul li a i {
+    .navbar ul li a i {
     //     visibility: hidden;
-    // }
+    // padding: 0 auto;
+    // text-align: center;
+     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
     .navbar ul {
         display: block !important;
     }
