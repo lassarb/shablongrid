@@ -33,7 +33,7 @@ img {
 }
 
 header {
-    margin-top: -20px;
+    // margin-top: -20px;
 }
 
 .fluid-bg {
@@ -80,6 +80,7 @@ header {
     a {
         text-decoration: none;
     }
+    outline: 5px solid green;
 }
 
 body {
@@ -95,7 +96,7 @@ body {
 .container {
     width: 100%;
     margin: 0 auto;
-    margin-top: 20px;
+    // margin-top: 20px;
     // background: $color_container;
     .cols {
         float: left;
@@ -304,7 +305,8 @@ footer ul {
 @media only screen and (max-width: 1024px) {
     .fluid-bg {
         background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner_medium1.jpg");
-        height: 100%;
+        // height: 100%;
+        background-size: content;
         color: blue;
     }
 }
