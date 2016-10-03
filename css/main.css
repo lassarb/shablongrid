@@ -236,8 +236,9 @@ nav .menu_button i {
 }
 
 footer ul {
-  background-color: bisque;
+  background-color: #93a4a7;
   list-style-type: none;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
