@@ -21,8 +21,8 @@ img {
 }
 
 .fluid-bg {
-  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner_large.jpg");
-  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner_large.jpg");
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -250,14 +250,6 @@ footer ul {
 
   .navbar ul li {
     display: block;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  .fluid-bg {
-    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner_medium1.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner_medium1.jpg");
-    background-size: content;
-    color: blue;
   }
 }
 @media only screen and (min-width: 992px) {

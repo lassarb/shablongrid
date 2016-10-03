@@ -38,7 +38,7 @@ header {
 
 .fluid-bg {
     background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), // url(http://lorempixel.com/1080/610/nature);
-    url("../img/banner_large.jpg");
+    url("../img/banner.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     // background-position: 50% bottom;
@@ -304,10 +304,10 @@ footer ul {
 
 @media only screen and (max-width: 1024px) {
     .fluid-bg {
-        background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner_medium1.jpg");
-        // height: 100%;
-        background-size: content;
-        color: blue;
+        // background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner_small1.jpg");
+        // // height: 100%;
+        // // background-size: content;
+        // color: blue;
     }
 }
 
