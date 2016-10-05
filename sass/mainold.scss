@@ -103,9 +103,6 @@ header {
             color: darken($color_hover_link, 30%);
             padding-bottom: 20px;
         }
-        ul li {
-            display: inline-block;
-        }
     }
     h1 {
         font-size: 2em;
@@ -147,11 +144,10 @@ header {
     content: '';
     position: absolute;
     border-radius: 20px;
-    top: 0%;
-    right: 0%;
-    bottom: 0%;
-    left: 0%;
-    margin:10% 30%;
+    top: 35%;
+    right: 35%;
+    bottom: 35%;
+    left: 35%;
     background: hsla(0, 0%, 100%, .3);
     // filter: blur(1px);
 
