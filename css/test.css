@@ -1,2 +1,6 @@
-.a1 {
-  border-radius: 2px; }
+.some {
+  background: url('../img/200.jpg?1475518330'); }
+
+/* => */
+.some {
+  background: url("../images/200.jpg?23525345"); }

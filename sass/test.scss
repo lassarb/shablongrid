@@ -1,4 +1,6 @@
 
-.a1 {
-    border-radius: 2px;
-}
+@import "compass";
+
+.some { background: image-url('200.jpg'); }
+/* => */
+.some { background: url('images/200.jpg?23525345'); }
