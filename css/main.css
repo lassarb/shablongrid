@@ -68,6 +68,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   src: url('../fonts/RobotoRegular/RobotoRegular.eot?1411918800');
   src: url('../fonts/RobotoRegular/RobotoRegular.eot?&1411918800#iefix') format('embedded-opentype'), url('../fonts/RobotoRegular/RobotoRegular.woff?1411918474') format('woff'), url('../fonts/RobotoRegular/RobotoRegular.ttf?1411918644') format('truetype');
 }
+@font-face {
+  font-family: "Resphekt";
+  src: url('../fonts/Resphekt/Resphekt.ttf?1396606772') format('truetype');
+}
 html,
 body {
   height: 100%;
@@ -94,27 +98,37 @@ img {
 }
 
 .fluid-bg {
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+  height: 80%;
+  color: #f5f5f5;
   background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner.jpg");
   background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)), url("../img/banner.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  color: #f5f5f5;
-  padding: 10em 0;
-  margin-bottom: 0;
-  height: 100%;
 }
-.fluid-bg .container {
-  bottom: 2em;
-  display: block;
+.fluid-bg .header-bl-bottom {
   position: absolute;
+  left: 0;
+  top: 40%;
+  text-align: center;
+}
+.fluid-bg .header-bl-bottom p {
+  font-family: Resphekt;
+  font-size: 1.8em;
+  color: #2B4862;
+}
+.fluid-bg .header-bl-bottom h3 {
+  color: #485659;
+  padding-bottom: 20px;
 }
 .fluid-bg h1 {
   font-size: 2em;
   margin-bottom: 30px;
   margin-top: 20px;
-  font-weight: 400;
   line-height: 1.1;
 }
 .fluid-bg p {
@@ -134,6 +148,17 @@ img {
   font-size: 0.8em;
   z-index: 4000;
   box-shadow: grey 1px 1px 3px;
+}
+
+.fluid-bg::before {
+  content: '';
+  position: absolute;
+  border-radius: 20px;
+  top: 35%;
+  right: 35%;
+  bottom: 35%;
+  left: 35%;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .row {
@@ -332,6 +357,14 @@ footer ul {
   .navbar .nav-left ul li {
     display: block;
   }
+
+  .fluid-bg {
+    height: 50%;
+  }
+
+  .fluid-bg::before {
+    display: none;
+  }
 }
 @media only screen and (min-width: 992px) {
   .navbar ul {
@@ -370,7 +403,8 @@ footer {
   height: 36px;
 }
 
-#search-site input, #search-site button {
+#search-site input,
+#search-site button {
   padding: 6px;
   border: 1px solid #e7e7e7;
   border-radius: 4px;
