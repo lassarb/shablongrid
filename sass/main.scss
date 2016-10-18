@@ -13,16 +13,15 @@ $color_outline: transparent;
 $color_hover_link: #93a4a7;
 $color_bg_footer: #93a4a7;
 $color_nav_link: #2B4862;
+// $color_nav_link: lighten(#2B4862,40%);
 $base-font-size: 100%;
-
 /*fonts*/
-
 $font_0: Arial;
 $font_1: Helvetica;
 $font_2: sans-serif;
 $font_3: RobotoRegular;
 $font_4: Resphekt;
-
+$font_5: RobotoLight;
 * {
     margin: 0;
     padding: 0;
@@ -31,11 +30,9 @@ $font_4: Resphekt;
     AddType text/x-component .htc*/
 }
 
-@include font-face("RobotoRegular", font-files( "RobotoRegular/RobotoRegular.woff", "RobotoRegular/RobotoRegular.ttf"),
-   "RobotoRegular/RobotoRegular.eot"
-);
+@include font-face("RobotoRegular", font-files( "RobotoRegular/RobotoRegular.woff", "RobotoRegular/RobotoRegular.ttf"), "RobotoRegular/RobotoRegular.eot");
+@include font-face("RobotoLight", font-files( "RobotoLight/RobotoLight.woff", "RobotoLight/RobotoLight.ttf"), "RobotoLight/RobotoLight.eot");
 @include font-face("Resphekt", font-files( "Resphekt/Resphekt.ttf"));
-
 html,
 body {
     height: 100%;
@@ -64,9 +61,10 @@ img {
 
 header {
     // margin-top: -20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
-.fluid-bg {
+.header_bg {
     margin-bottom: 0;
     position: relative;
     overflow: hidden;
@@ -75,9 +73,12 @@ header {
     // outline: 5px solid green;
     // padding: 10em 0;
     background-image:
-     linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)),
-     // url(http://lorempixel.com/1080/610/nature);
+     // linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)),
+
+    // url(http://lorempixel.com/1080/610/nature);
+    linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.3)),
     url("../img/banner.jpg");
+    // background-color:
     background-repeat: no-repeat;
     background-position: center center;
     // background-position: 50% bottom;
@@ -95,13 +96,16 @@ header {
         // width: 100%;
         text-align: center;
         p {
-            font-family: $font_4;
-            font-size: 1.8em;
-            color: $color_nav_link;
+            font-family: $font_5;
+            font-size: 2em;
+            font-weight: 100;
+            color: white;
+            // color: $color_nav_link;
         }
         h3 {
-            color: darken($color_hover_link, 30%);
+            // color: darken($color_hover_link, 30%);
             padding-bottom: 20px;
+            font-family: $font_5;
         }
         ul li {
             display: inline-block;
@@ -116,7 +120,6 @@ header {
         // margin-left: 10px;
         // font-weight: 400;
         line-height: 1.1;
-
     }
     p {
         margin-bottom: 30px;
@@ -141,20 +144,23 @@ header {
     // @include box-shadow(grey 2px 2px 10px);
 }
 
-.fluid-bg::before {
+i:after {
+    content: "\00A0";
+}
+
+.header_bg::before {
     // background-image:
     // url("../img/banner.jpg");
     content: '';
     position: absolute;
-    border-radius: 20px;
+    // border-radius: 20px;
     top: 0%;
     right: 0%;
     bottom: 0%;
     left: 0%;
-    margin:10% 30%;
+    margin: 15% 0;
     background: hsla(0, 0%, 100%, .3);
     // filter: blur(1px);
-
 }
 
 .row {
@@ -265,9 +271,15 @@ nav {
         // align-items: center;
         width: 100%;
         padding: 10px;
-        color: $color_nav_link;
+        //color: lighten($black, 80%);
+        // color:darken(red, 10%);
+        // color: $color_nav_link;
+        color: black;
         text-decoration: none;
-        font-size: 1.2em;
+        font-size: 0.8em;
+        font-weight: 100;
+        font-family: $font_5;
+        text-transform: uppercase;
         // @include text-shadow(0 1px 1px rgba(#000, 0.3));
         /* Cross-browser CSS3 transition */
         @include single-transition(color,
@@ -316,11 +328,18 @@ nav {
     // background-color: rgba(255, 255, 255, 0);
     background-color: transparent !important;
     border-color: transparent;
+
     // transition: background-color 2s ease 0s;
+    a, i {
+        color:white;
+    }
+    // ul.social {
+    //     padding-top: 20px;
+    // }
 }
 
 .navbar a:hover,
-.fluid-bg a:hover {
+.header_bg a:hover {
     color: $color_hover_link;
 }
 
@@ -336,13 +355,69 @@ nav {
     margin-top: 50px;
     padding: 20px;
 }
+footer {
+ background-color: lighten($color_hover_link, 20%);
+  margin: 25px 0 10px 0;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  // border-radius: 0.4em;
+  // @include background-image(linear-gradient(white, #93a4a7));
+}
 
 footer ul {
-    // background-color: $color_bg_footer;
+
     list-style-type: none;
-    // display: inline-block;
+    display: inline-block;
     text-align: center;
+    margin:0 10%;
+
+    li {
+        display: inline-block;
+    }
 }
+footer li a, footer i {
+  color: #fff;
+  font-size: 1.2em;
+  line-height: 2.4em;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.fullscreen a {
+    display: flex;
+}
+
+#signupForm {
+    display: none;
+}
+
+#signupForm:target {
+    display: block;
+}
+
+
+
+.content img {
+    border-radius: 0.4em;
+    @include box-shadow(grey 2px 2px 10px);
+}
+
+.form-wrapper {
+    height: 36px;
+}
+
+#search-site input,
+#search-site button {
+    padding: 6px;
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    font-size: 0.8em;
+    @include box-shadow(grey 1px 1px 3px);
+}
+
+// #search-site {
+//         @extend #search-site;
+//         }
 
 @media print {}
 
@@ -381,13 +456,13 @@ footer ul {
     // // .nav-right {
     //     float: left !important;
     // }
-    .fluid-bg {
+    .header_bg {
         // background: url('../img/small.jpeg') no-repeat center center;
     }
-    .fluid-bg {
-    height: 50%;
-}
-    .fluid-bg::before {
+    .header_bg {
+        height: 50%;
+    }
+    .header_bg::before {
         display: none;
     }
 }
@@ -403,46 +478,4 @@ footer ul {
     }
 }
 
-.fullscreen a {
-    display: flex;
-}
 
-#signupForm {
-    display: none;
-}
-
-#signupForm:target {
-    display: block;
-}
-
-footer {
-    @include background-image(linear-gradient(white, #93a4a7));
-    // @include filter-gradient(#aaaaaa,
-    // #eeeeee);
-    // /* Fallback: */
-    // background: #cccccc;
-    // /* CSS3 c префиксами вендоров */
-    // @include background(linear-gradient(top, #aaaaaa, #eeeeee));
-}
-
-.content img {
-    border-radius: 0.4em;
-    @include box-shadow(grey 2px 2px 10px);
-}
-
-.form-wrapper {
-    height: 36px;
-}
-
-#search-site input,
-#search-site button {
-    padding: 6px;
-    border: 1px solid #e7e7e7;
-    border-radius: 4px;
-    font-size: 0.8em;
-    @include box-shadow(grey 1px 1px 3px);
-}
-
-// #search-site {
-//         @extend #search-site;
-//         }

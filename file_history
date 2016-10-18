@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "file_history": {
+            "path_exclude_patterns": ["/bin/"],
+            "path_reinclude_patterns": ["\\.compiled$"]
+        }
+    }
+}
